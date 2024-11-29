@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoreo de Cultivo Vertical</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Monitoreo de Cultivo Vertical</h1>
+
+        <!-- Datos de sensores -->
+        <div class="datos">
+            <h2>Datos actuales</h2>
+            <p id="humedad">Humedad: 0%</p>
+            <p id="temperatura">Temperatura: 0°C</p>
+            <p id="nivelAgua">Nivel de Agua: 0 cm</p>
+        </div>
+
+        <!-- Alarmas -->
+        <div id="alarmas">
+            <div id="alarmaNivelAgua" class="alarma alarma-normal">
+                Nivel de agua: Normal
+            </div>
+            <div id="alarmaTempElevada" class="alarma alarma-normal">
+                Temperatura: Normal
+            </div>
+            <div id="alarmaHumedadBaja" class="alarma alarma-normal">
+                Humedad: Normal
+            </div>
+            <div id="alarmaHumedadAlta" class="alarma alarma-normal">
+                Humedad: Normal
+            </div>
+        </div>
+
+        <!-- Botones de alerta (opcional, para acciones) -->
+        <div class="botones">
+            <button id="btnAlarmaNivelAgua">Alarma Nivel de Agua</button>
+            <button id="btnAlarmaTemperatura">Alarma Temperatura</button>
+            <button id="btnAlarmaHumedadBaja">Alarma Humedad Baja</button>
+            <button id="btnAlarmaHumedadAlta">Alarma Humedad Alta</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.0/socket.io.min.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
